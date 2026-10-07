@@ -1,0 +1,680 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" width="100%" height="100%">
+  <defs>
+    <!-- Soft Warm Ambient Glow (Pulsed in Chapter 1 & 3) -->
+    <radialGradient id="bq-ambient-glow" cx="50%" cy="38%" r="56%">
+      <stop offset="0%" stop-color="#FFD6A5" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#FFADAD" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#FF758F" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FF758F" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Master Wrapping Paper Gradients (Warm Korean Kraft & Frosted Silk Tissue) -->
+    <linearGradient id="kraft-back-sheet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EAD5BE"/>
+      <stop offset="45%" stop-color="#D4B696"/>
+      <stop offset="100%" stop-color="#AA845E"/>
+    </linearGradient>
+    <linearGradient id="kraft-fold-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DEC9"/>
+      <stop offset="50%" stop-color="#DFBF9F"/>
+      <stop offset="100%" stop-color="#B8946F"/>
+    </linearGradient>
+    <linearGradient id="kraft-fold-right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8E8D8"/>
+      <stop offset="45%" stop-color="#E5CAAE"/>
+      <stop offset="100%" stop-color="#C29F7C"/>
+    </linearGradient>
+    <linearGradient id="kraft-inner-cone" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#725032" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#8F6B47" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C29F7C" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="tissue-paper-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE2D3"/>
+    </linearGradient>
+    <linearGradient id="tissue-paper-right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#E5D6C5"/>
+    </linearGradient>
+
+    <!-- Master Silk Ribbon Gradients -->
+    <linearGradient id="ribbon-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB3C6"/>
+      <stop offset="40%" stop-color="#FF758F"/>
+      <stop offset="85%" stop-color="#D92548"/>
+      <stop offset="100%" stop-color="#A81832"/>
+    </linearGradient>
+    <linearGradient id="ribbon-highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE3ED" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFB3C6" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Master Foliage & Stem Gradients -->
+    <linearGradient id="bq-stem-main" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#558B2F"/>
+      <stop offset="50%" stop-color="#3E6B20"/>
+      <stop offset="100%" stop-color="#244012"/>
+    </linearGradient>
+    <linearGradient id="bq-eucalyptus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84A98C"/>
+      <stop offset="100%" stop-color="#4F7167"/>
+    </linearGradient>
+
+    <!-- ==================== MASTER FLOWER GRADIENTS ==================== -->
+    <!-- 1. ROSE MASTER GRADIENTS (from rose.svg) -->
+    <radialGradient id="bq-rose-petal-main" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF5D73"/>
+      <stop offset="60%" stop-color="#E63956"/>
+      <stop offset="100%" stop-color="#A81832"/>
+    </radialGradient>
+    <linearGradient id="bq-rose-petal-dark" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#C9184A"/>
+      <stop offset="100%" stop-color="#800F2F"/>
+    </linearGradient>
+    <linearGradient id="bq-rose-petal-light" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8BA"/>
+      <stop offset="50%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#D92548"/>
+    </linearGradient>
+    <linearGradient id="bq-rose-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#588157"/>
+      <stop offset="100%" stop-color="#3A5A40"/>
+    </linearGradient>
+
+    <!-- 2. TULIP MASTER GRADIENTS (from tulip.svg) -->
+    <linearGradient id="bq-tulip-petal-back" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#F25C7E"/>
+      <stop offset="100%" stop-color="#C72C48"/>
+    </linearGradient>
+    <linearGradient id="bq-tulip-petal-left" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFB3C6"/>
+      <stop offset="40%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#D92548"/>
+    </linearGradient>
+    <linearGradient id="bq-tulip-petal-right" x1="80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8BA"/>
+      <stop offset="40%" stop-color="#FF637D"/>
+      <stop offset="100%" stop-color="#C9184A"/>
+    </linearGradient>
+    <linearGradient id="bq-tulip-petal-mid" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0E9"/>
+      <stop offset="45%" stop-color="#FF85A1"/>
+      <stop offset="100%" stop-color="#E02A4F"/>
+    </linearGradient>
+    <linearGradient id="bq-tulip-leaf-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6DA34D"/>
+      <stop offset="100%" stop-color="#385F24"/>
+    </linearGradient>
+    <linearGradient id="bq-tulip-leaf-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7BB458"/>
+      <stop offset="100%" stop-color="#426F2B"/>
+    </linearGradient>
+
+    <!-- 3. SUNFLOWER MASTER GRADIENTS (from sunflower.svg) -->
+    <linearGradient id="bq-sun-petal-back" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9A825"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+    <linearGradient id="bq-sun-petal-front" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="40%" stop-color="#FBC02D"/>
+      <stop offset="100%" stop-color="#F57F17"/>
+    </linearGradient>
+    <radialGradient id="bq-sun-disk-core" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#5D4037"/>
+      <stop offset="40%" stop-color="#3E2723"/>
+      <stop offset="85%" stop-color="#27140B"/>
+      <stop offset="100%" stop-color="#4E342E"/>
+    </radialGradient>
+    <linearGradient id="bq-sun-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#689F38"/>
+      <stop offset="100%" stop-color="#33691E"/>
+    </linearGradient>
+
+    <!-- 4. DAISY MASTER GRADIENTS (from daisy.svg) -->
+    <linearGradient id="bq-daisy-petal-back" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ECECF2"/>
+      <stop offset="100%" stop-color="#CECED8"/>
+    </linearGradient>
+    <linearGradient id="bq-daisy-petal-front" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F8F8FC"/>
+      <stop offset="100%" stop-color="#E6E6EE"/>
+    </linearGradient>
+    <radialGradient id="bq-daisy-center" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="60%" stop-color="#F4A261"/>
+      <stop offset="100%" stop-color="#E76F51"/>
+    </radialGradient>
+    <linearGradient id="bq-daisy-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#79A390"/>
+      <stop offset="100%" stop-color="#3D5A4C"/>
+    </linearGradient>
+
+    <!-- 5. LAVENDER MASTER GRADIENTS (from lavender.svg) -->
+    <linearGradient id="bq-lav-floret-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8338EC"/>
+      <stop offset="100%" stop-color="#5A189A"/>
+    </linearGradient>
+    <linearGradient id="bq-lav-floret-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0AAFF"/>
+      <stop offset="60%" stop-color="#C77DFF"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
+    </linearGradient>
+    <linearGradient id="bq-lav-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#79A390"/>
+      <stop offset="100%" stop-color="#3D5A4C"/>
+    </linearGradient>
+
+    <!-- Soft Ambient Drop Shadow Filters -->
+    <filter id="bq-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#241512" flood-opacity="0.25"/>
+    </filter>
+    <filter id="bq-contact-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1A0D0B" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- ==================== 1. AMBIENT GLOW HALO ==================== -->
+  <circle id="bouquet-glow-circle" cx="210" cy="220" r="195" fill="url(#bq-ambient-glow)" class="bouquet-glow-halo"/>
+
+  <!-- ==================== 2. BOTTOM EXPOSED STEMS (Gathered below ribbon) ==================== -->
+  <g id="bouquet-stems-bottom">
+    <!-- Rose Sturdy Stem (with thorn) -->
+    <path d="M208,425 L205,496" stroke="url(#bq-stem-main)" stroke-width="7.5" stroke-linecap="round"/>
+    <path d="M205,480 Q199,482 195,488 Q204,487 206,484 Z" fill="#244012"/>
+    <!-- Tulip Smooth Stem -->
+    <path d="M200,425 L192,488" stroke="url(#bq-stem-main)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Sunflower Thick Stem -->
+    <path d="M216,425 L225,492" stroke="url(#bq-stem-main)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Daisy Slender Stem -->
+    <path d="M194,425 L185,482" stroke="#406254" stroke-width="5.5" stroke-linecap="round"/>
+    <!-- Lavender Stems -->
+    <path d="M222,425 L232,482" stroke="#406254" stroke-width="5" stroke-linecap="round"/>
+    <!-- Stem tie shadow -->
+    <ellipse cx="210" cy="428" rx="22" ry="5" fill="#1A0D0B" opacity="0.4"/>
+  </g>
+
+  <!-- ==================== 3. BACKGROUND WRAPPING CRADLE ==================== -->
+  <!-- Solid, broad kraft backdrop completely supporting the bouquet -->
+  <g id="wrapping-back" filter="url(#bq-shadow)">
+    <!-- Rear Kraft Main Fan -->
+    <path d="M185,420 L45,230 L25,145 L135,190 L210,125 L285,190 L395,145 L375,230 L235,420 Z" fill="url(#kraft-back-sheet)"/>
+    <!-- Rear Center Support (ensures no void behind stems) -->
+    <polygon points="120,200 210,125 300,200 235,420 185,420" fill="#D4B696"/>
+    <!-- Left origami wing crease -->
+    <polygon points="45,230 25,145 135,190" fill="#E0C2A2" opacity="0.85"/>
+    <path d="M25,145 L135,190" stroke="#C29F7C" stroke-width="1.5"/>
+    <!-- Right origami wing crease -->
+    <polygon points="375,230 395,145 285,190" fill="#C7A47E" opacity="0.85"/>
+    <path d="M395,145 L285,190" stroke="#AA845E" stroke-width="1.5"/>
+
+    <!-- Frosted White Origami Tissue Paper Lining (Cradling blooms) -->
+    <g id="tissue-lining">
+      <!-- Left outer tissue peak -->
+      <polygon points="50,185 30,135 140,175" fill="url(#tissue-paper-left)" opacity="0.95"/>
+      <!-- Mid-left tissue peak -->
+      <polygon points="110,175 155,108 195,155" fill="url(#tissue-paper-left)" opacity="0.92"/>
+      <!-- Mid-right tissue peak -->
+      <polygon points="215,150 265,105 305,170" fill="url(#tissue-paper-right)" opacity="0.92"/>
+      <!-- Right outer tissue peak -->
+      <polygon points="275,175 390,135 365,185" fill="url(#tissue-paper-right)" opacity="0.95"/>
+      <!-- Tissue inner fold lines -->
+      <path d="M30,135 L140,175" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+      <path d="M155,108 L195,155" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+      <path d="M265,105 L305,170" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+      <path d="M390,135 L365,185" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7"/>
+    </g>
+
+    <!-- Deep Inner Cone Shadow where stems enter the wrapping -->
+    <path d="M70,250 C140,290 280,290 350,250 L235,420 L185,420 Z" fill="url(#kraft-inner-cone)"/>
+  </g>
+
+  <!-- ==================== 4. DEPTH LAYER 1: BACKGROUND FOLIAGE & LAVENDER ==================== -->
+  <g id="bouquet-back-foliage">
+    <!-- Left Eucalyptus Branch -->
+    <g transform="translate(35, 75) rotate(-20)">
+      <path d="M60,180 Q45,95 20,35" fill="none" stroke="#4F7167" stroke-width="3.5" stroke-linecap="round"/>
+      <ellipse cx="22" cy="40" rx="15" ry="11" fill="url(#bq-eucalyptus)" transform="rotate(-30 22 40)"/>
+      <ellipse cx="32" cy="75" rx="17" ry="12" fill="url(#bq-eucalyptus)" transform="rotate(-20 32 75)"/>
+      <ellipse cx="44" cy="110" rx="19" ry="13" fill="url(#bq-eucalyptus)" transform="rotate(-15 44 110)"/>
+      <ellipse cx="52" cy="145" rx="20" ry="14" fill="url(#bq-eucalyptus)" transform="rotate(-10 52 145)"/>
+    </g>
+
+    <!-- Right Eucalyptus Branch -->
+    <g transform="translate(260, 48) rotate(22)">
+      <path d="M40,180 Q60,95 85,30" fill="none" stroke="#4F7167" stroke-width="3.5" stroke-linecap="round"/>
+      <ellipse cx="83" cy="35" rx="15" ry="11" fill="url(#bq-eucalyptus)" transform="rotate(30 83 35)"/>
+      <ellipse cx="72" cy="70" rx="17" ry="12" fill="url(#bq-eucalyptus)" transform="rotate(20 72 70)"/>
+      <ellipse cx="60" cy="105" rx="19" ry="13" fill="url(#bq-eucalyptus)" transform="rotate(15 60 105)"/>
+      <ellipse cx="50" cy="142" rx="20" ry="14" fill="url(#bq-eucalyptus)" transform="rotate(10 50 142)"/>
+    </g>
+
+    <!-- Background Forest Ruscus Leaves -->
+    <path d="M125,190 C85,150 65,95 58,55 C78,85 110,135 140,175 Z" fill="#2D4A22" opacity="0.9"/>
+    <path d="M295,190 C335,150 355,95 362,55 C342,85 310,135 280,175 Z" fill="#2D4A22" opacity="0.9"/>
+
+    <!-- ==================== MASTER LAVENDER SPRIG #1 (LEFT) ==================== -->
+    <!-- Exact Master Anatomy from lavender.svg -->
+    <g id="bq-lavender-left" transform="translate(122, 110) rotate(-18) scale(0.72) translate(-160, -180)">
+      <!-- Main Stalk -->
+      <path d="M160,70 Q159,250 160,395" fill="none" stroke="#406254" stroke-width="6" stroke-linecap="round"/>
+      <!-- Slender Linear Leaves -->
+      <path d="M160,330 C135,310 115,280 112,240 C122,275 142,305 160,318 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,310 C185,290 205,260 208,220 C198,255 178,285 160,298 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,260 C140,240 128,215 125,185 C132,210 148,235 160,250 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,245 C180,225 192,200 195,170 C188,195 172,220 160,235 Z" fill="url(#bq-lav-leaf)"/>
+      <!-- Clustered Florets (All 6 tiers + tip) -->
+      <g id="lavender-bloom-left">
+        <!-- Spike Tip -->
+        <ellipse cx="160" cy="72" rx="7" ry="11" fill="url(#bq-lav-floret-light)"/>
+        <ellipse cx="154" cy="80" rx="8" ry="10" fill="url(#bq-lav-floret-dark)" transform="rotate(-25 154 80)"/>
+        <ellipse cx="166" cy="80" rx="8" ry="10" fill="url(#bq-lav-floret-light)" transform="rotate(25 166 80)"/>
+        <!-- Tier 1 -->
+        <g transform="translate(0, 18)">
+          <ellipse cx="148" cy="80" rx="11" ry="9" fill="url(#bq-lav-floret-dark)" transform="rotate(-30 148 80)"/>
+          <ellipse cx="172" cy="80" rx="11" ry="9" fill="url(#bq-lav-floret-light)" transform="rotate(30 172 80)"/>
+          <ellipse cx="160" cy="82" rx="10" ry="11" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="152" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+        </g>
+        <!-- Tier 2 -->
+        <g transform="translate(0, 38)">
+          <ellipse cx="144" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-dark)" transform="rotate(-35 144 80)"/>
+          <ellipse cx="176" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-light)" transform="rotate(35 176 80)"/>
+          <ellipse cx="159" cy="83" rx="12" ry="12" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="150" cy="88" rx="9" ry="7" fill="#F3C4FB"/>
+          <ellipse cx="168" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+        </g>
+        <!-- Tier 3 -->
+        <g transform="translate(0, 60)">
+          <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-40 142 80)"/>
+          <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(40 178 80)"/>
+          <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#bq-lav-floret-dark)"/>
+          <ellipse cx="149" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+          <ellipse cx="170" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+        </g>
+        <!-- Tier 4 -->
+        <g transform="translate(0, 84)">
+          <ellipse cx="141" cy="80" rx="15" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-45 141 80)"/>
+          <ellipse cx="179" cy="80" rx="15" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(45 179 80)"/>
+          <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="148" cy="90" rx="9" ry="7" fill="#F3C4FB"/>
+          <ellipse cx="171" cy="90" rx="9" ry="7" fill="#F3C4FB"/>
+        </g>
+        <!-- Tier 5 -->
+        <g transform="translate(0, 108)">
+          <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-40 142 80)"/>
+          <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(40 178 80)"/>
+          <ellipse cx="160" cy="83" rx="12" ry="11" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="150" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+        </g>
+        <!-- Tier 6 -->
+        <g transform="translate(0, 134)">
+          <ellipse cx="145" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-dark)" transform="rotate(-35 145 80)"/>
+          <ellipse cx="175" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-light)" transform="rotate(35 175 80)"/>
+          <ellipse cx="160" cy="82" rx="11" ry="10" fill="url(#bq-lav-floret-dark)"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==================== MASTER LAVENDER SPRIG #2 (RIGHT) ==================== -->
+    <g id="bq-lavender-right" transform="translate(295, 108) rotate(15) scale(0.70) translate(-160, -180)">
+      <path d="M160,70 Q159,250 160,395" fill="none" stroke="#406254" stroke-width="6" stroke-linecap="round"/>
+      <path d="M160,330 C135,310 115,280 112,240 C122,275 142,305 160,318 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,310 C185,290 205,260 208,220 C198,255 178,285 160,298 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,260 C140,240 128,215 125,185 C132,210 148,235 160,250 Z" fill="url(#bq-lav-leaf)"/>
+      <path d="M160,245 C180,225 192,200 195,170 C188,195 172,220 160,235 Z" fill="url(#bq-lav-leaf)"/>
+      <g id="lavender-bloom-right">
+        <ellipse cx="160" cy="72" rx="7" ry="11" fill="url(#bq-lav-floret-light)"/>
+        <ellipse cx="154" cy="80" rx="8" ry="10" fill="url(#bq-lav-floret-dark)" transform="rotate(-25 154 80)"/>
+        <ellipse cx="166" cy="80" rx="8" ry="10" fill="url(#bq-lav-floret-light)" transform="rotate(25 166 80)"/>
+        <g transform="translate(0, 18)">
+          <ellipse cx="148" cy="80" rx="11" ry="9" fill="url(#bq-lav-floret-dark)" transform="rotate(-30 148 80)"/>
+          <ellipse cx="172" cy="80" rx="11" ry="9" fill="url(#bq-lav-floret-light)" transform="rotate(30 172 80)"/>
+          <ellipse cx="160" cy="82" rx="10" ry="11" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="152" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+        </g>
+        <g transform="translate(0, 38)">
+          <ellipse cx="144" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-dark)" transform="rotate(-35 144 80)"/>
+          <ellipse cx="176" cy="80" rx="13" ry="10" fill="url(#bq-lav-floret-light)" transform="rotate(35 176 80)"/>
+          <ellipse cx="159" cy="83" rx="12" ry="12" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="150" cy="88" rx="9" ry="7" fill="#F3C4FB"/>
+          <ellipse cx="168" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+        </g>
+        <g transform="translate(0, 60)">
+          <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-40 142 80)"/>
+          <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(40 178 80)"/>
+          <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#bq-lav-floret-dark)"/>
+          <ellipse cx="149" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+          <ellipse cx="170" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+        </g>
+        <g transform="translate(0, 84)">
+          <ellipse cx="141" cy="80" rx="15" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-45 141 80)"/>
+          <ellipse cx="179" cy="80" rx="15" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(45 179 80)"/>
+          <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#bq-lav-floret-light)"/>
+          <ellipse cx="148" cy="90" rx="9" ry="7" fill="#F3C4FB"/>
+        </g>
+        <g transform="translate(0, 108)">
+          <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-dark)" transform="rotate(-40 142 80)"/>
+          <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#bq-lav-floret-light)" transform="rotate(40 178 80)"/>
+          <ellipse cx="160" cy="83" rx="12" ry="11" fill="url(#bq-lav-floret-light)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== 5. DEPTH LAYER 2: MIDGROUND SUPPORTING FLOWERS ==================== -->
+  <g id="bouquet-midground">
+    <!-- Converging flower stems entering the cone -->
+    <g id="stems-midground">
+      <!-- Tulip Stem -->
+      <path d="M142,205 Q175,310 202,422" fill="none" stroke="url(#bq-stem-main)" stroke-width="7.5" stroke-linecap="round"/>
+      <!-- Sunflower Stem -->
+      <path d="M272,215 Q245,315 216,422" fill="none" stroke="url(#bq-stem-main)" stroke-width="8" stroke-linecap="round"/>
+      <!-- Left Daisy Stem -->
+      <path d="M115,260 Q150,335 196,422" fill="none" stroke="#406254" stroke-width="5.5" stroke-linecap="round"/>
+      <!-- Right Daisy Accent Stem -->
+      <path d="M296,270 Q258,340 220,422" fill="none" stroke="#406254" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- ==================== MASTER TULIP (Upper-Left Midground) ==================== -->
+    <!-- Exact Master Anatomy from tulip.svg -->
+    <g id="bq-tulip" transform="translate(142, 162) rotate(-6) scale(0.82) translate(-160, -140)" filter="url(#bq-contact-shadow)">
+      <!-- Master Arching Tulip Leaves -->
+      <path d="M160,380 C130,340 90,260 88,185 C96,215 130,290 160,320 Z" fill="url(#bq-tulip-leaf-left)"/>
+      <path d="M160,380 C130,340 90,260 88,185" fill="none" stroke="#9AD37B" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M160,350 C185,310 235,240 238,160 C230,195 190,280 160,310 Z" fill="url(#bq-tulip-leaf-right)"/>
+      <path d="M160,350 C185,310 235,240 238,160" fill="none" stroke="#A7E185" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- Master Tulip Bloom Cup -->
+      <g id="tulip-bloom-instance">
+        <!-- Back Central Peak Petal -->
+        <path d="M160,65 C142,95 138,135 140,165 C152,175 168,175 180,165 C182,135 178,95 160,65 Z" fill="url(#bq-tulip-petal-back)"/>
+        <!-- Left Outer Petal -->
+        <path d="M160,78 C122,82 98,115 102,158 C106,192 135,210 160,212 C145,190 125,160 135,120 C140,100 152,86 160,78 Z" fill="url(#bq-tulip-petal-left)"/>
+        <!-- Right Outer Petal -->
+        <path d="M160,78 C198,82 222,115 218,158 C214,192 185,210 160,212 C175,190 195,160 185,120 C180,100 168,86 160,78 Z" fill="url(#bq-tulip-petal-right)"/>
+        <!-- Front Center Overlapping Petal -->
+        <path d="M160,82 C142,102 124,130 128,170 C132,198 148,212 160,214 C172,212 188,198 192,170 C196,130 178,102 160,82 Z" fill="url(#bq-tulip-petal-mid)"/>
+        <!-- Satin Highlight Glimmer -->
+        <path d="M160,92 C150,115 142,145 144,175" fill="none" stroke="#FFF0F5" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+        <path d="M152,185 Q160,205 168,185" fill="none" stroke="#FFE3ED" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+      </g>
+    </g>
+
+    <!-- ==================== MASTER SUNFLOWER (Upper-Right Midground) ==================== -->
+    <!-- Exact Master Anatomy from sunflower.svg -->
+    <g id="bq-sunflower" transform="translate(274, 170) rotate(-6) scale(0.76) translate(-160, -155)" filter="url(#bq-contact-shadow)">
+      <!-- Master Broad Heart-Shaped Foliage -->
+      <g>
+        <path d="M162,250 C195,225 245,235 258,275 C230,298 185,285 162,260 Z" fill="url(#bq-sun-leaf)"/>
+        <path d="M162,250 Q210,260 250,272" fill="none" stroke="#8BC34A" stroke-width="2" stroke-linecap="round"/>
+        <path d="M195,256 Q215,245 230,250" fill="none" stroke="#8BC34A" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M210,265 Q225,278 240,277" fill="none" stroke="#8BC34A" stroke-width="1.3" stroke-linecap="round"/>
+      </g>
+
+      <!-- Master Sunflower Head: All 32 Dual-Tier Radial Petals & Concentric Disk -->
+      <g id="sunflower-bloom-instance">
+        <!-- Tier 1: Background Petals (16 radiating petals) -->
+        <g fill="url(#bq-sun-petal-back)">
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(0 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(22.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(45 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(67.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(90 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(112.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(135 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(157.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(180 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(202.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(225 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(247.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(270 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(292.5 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(315 160 155)"/>
+          <path d="M160,65 C153,95 152,115 160,115 C168,115 167,95 160,65 Z" transform="rotate(337.5 160 155)"/>
+        </g>
+        <!-- Tier 2: Foreground Golden Petals (Offset by 11.25 deg) -->
+        <g fill="url(#bq-sun-petal-front)">
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(11.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(33.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(56.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(78.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(101.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(123.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(146.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(168.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(191.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(213.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(236.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(258.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(281.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(303.75 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(326.25 160 155)"/>
+          <path d="M160,68 C151,96 150,118 160,118 C170,118 169,96 160,68 Z" transform="rotate(348.75 160 155)"/>
+        </g>
+        <!-- Center Seed Disk with Concentric Texture Rings -->
+        <circle cx="160" cy="155" r="44" fill="url(#bq-sun-disk-core)"/>
+        <circle cx="160" cy="155" r="44" fill="none" stroke="#A1887F" stroke-width="1.8" stroke-dasharray="2,3" opacity="0.6"/>
+        <circle cx="160" cy="155" r="32" fill="none" stroke="#D7CCC8" stroke-width="1.2" stroke-dasharray="1.5,2.5" opacity="0.4"/>
+        <circle cx="160" cy="155" r="18" fill="none" stroke="#D7CCC8" stroke-width="1.2" stroke-dasharray="1,2" opacity="0.5"/>
+      </g>
+    </g>
+
+    <!-- ==================== MASTER DAISY (Left Flank) ==================== -->
+    <!-- Exact Master Anatomy from daisy.svg -->
+    <g id="bq-daisy-left" transform="translate(116, 232) rotate(-10) scale(0.65) translate(-160, -150)" filter="url(#bq-contact-shadow)">
+      <!-- Master Serrated Daisy Foliage -->
+      <g>
+        <path d="M159,280 C125,260 100,270 85,300 C110,312 140,295 159,290 Z" fill="url(#bq-daisy-leaf)"/>
+        <path d="M159,280 Q120,285 90,298" fill="none" stroke="#A4C3B2" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+
+      <!-- Master Daisy Bloom: Dual-Tier 36 Petals & Glowing Button Center -->
+      <g id="daisy-bloom-left">
+        <!-- Back Tier Shaded Petals (18 petals) -->
+        <g fill="url(#bq-daisy-petal-back)">
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(0 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(20 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(40 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(60 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(80 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(100 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(120 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(140 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(160 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(180 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(200 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(220 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(240 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(260 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(280 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(300 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(320 160 150)"/>
+          <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(340 160 150)"/>
+        </g>
+        <!-- Front Tier Pure White Petals (18 petals, offset by 10 deg) -->
+        <g fill="url(#bq-daisy-petal-front)">
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(10 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(30 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(50 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(70 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(90 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(110 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(130 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(150 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(170 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(190 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(210 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(230 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(250 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(270 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(290 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(310 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(330 160 150)"/>
+          <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(350 160 150)"/>
+        </g>
+        <!-- Center Button with Texture Rings -->
+        <circle cx="160" cy="150" r="34" fill="url(#bq-daisy-center)"/>
+        <circle cx="160" cy="150" r="34" fill="none" stroke="#F4A261" stroke-width="1.5" stroke-dasharray="2,3" opacity="0.6"/>
+        <circle cx="160" cy="150" r="22" fill="none" stroke="#FFF" stroke-width="1.2" stroke-dasharray="1.5,2.5" opacity="0.5"/>
+      </g>
+    </g>
+
+    <!-- Supporting Daisy Accent (Right Side Harmonizer) -->
+    <g id="bq-daisy-right" transform="translate(296, 246) rotate(16) scale(0.52) translate(-160, -150)" filter="url(#bq-contact-shadow)">
+      <g fill="url(#bq-daisy-petal-back)">
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(0 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(30 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(60 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(90 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(120 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(150 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(180 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(210 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(240 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(270 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(300 160 150)"/>
+        <path d="M160,55 C154,85 153,115 160,115 C167,115 166,85 160,55 Z" transform="rotate(330 160 150)"/>
+      </g>
+      <g fill="url(#bq-daisy-petal-front)">
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(15 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(45 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(75 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(105 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(135 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(165 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(195 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(225 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(255 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(285 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(315 160 150)"/>
+        <path d="M160,58 C153,88 152,118 160,118 C168,118 167,88 160,58 Z" transform="rotate(345 160 150)"/>
+      </g>
+      <circle cx="160" cy="150" r="30" fill="url(#bq-daisy-center)"/>
+      <circle cx="160" cy="150" r="30" fill="none" stroke="#F4A261" stroke-width="1.2" stroke-dasharray="2,3" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ==================== 6. DEPTH LAYER 3: FOREGROUND HERO ROSE & FILLERS ==================== -->
+  <g id="bouquet-foreground">
+    <!-- MASTER HERO ROSE (Center Focal Point - 100% Master Anatomy from rose.svg) -->
+    <g id="bq-rose-hero" transform="translate(196, 222) rotate(-4) scale(0.88) translate(-160, -150)" filter="url(#bq-shadow)">
+      <!-- Master Stem, Thorn, Foliage & Sepals -->
+      <path d="M160,195 Q158,280 162,390" fill="none" stroke="#2D4A22" stroke-width="7" stroke-linecap="round"/>
+      <!-- Left Master Rose Leaf with Veins -->
+      <g>
+        <path d="M159,275 C120,265 95,285 85,310 C105,325 140,310 159,285 Z" fill="url(#bq-rose-leaf)"/>
+        <path d="M159,275 Q125,295 90,307" fill="none" stroke="#74A57F" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M135,286 Q125,278 112,282" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M145,293 Q138,302 122,305" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <!-- Sepals beneath bloom -->
+      <path d="M148,185 C142,210 130,225 120,230 C135,215 146,195 152,185 Z" fill="#4F772D"/>
+      <path d="M172,185 C178,210 190,225 200,230 C185,215 174,195 168,185 Z" fill="#4F772D"/>
+      <path d="M160,188 C158,218 162,230 160,238 C163,225 163,205 160,188 Z" fill="#3A5A40"/>
+
+      <!-- Master Rose Bloom: ALL 12 Richly Sculpted Petal Layers -->
+      <g id="rose-bloom-hero">
+        <!-- 1. Outer Base Petals -->
+        <path d="M100,150 C95,200 135,215 160,215 C185,215 225,200 220,150 C220,105 180,85 160,85 C140,85 100,105 100,150 Z" fill="url(#bq-rose-petal-dark)" opacity="0.95"/>
+        <!-- 2. Outer Flared Left Petal -->
+        <path d="M92,135 C88,175 125,205 160,208 C135,190 108,165 108,130 C108,110 95,115 92,135 Z" fill="url(#bq-rose-petal-main)"/>
+        <!-- 3. Outer Flared Right Petal -->
+        <path d="M228,135 C232,175 195,205 160,208 C185,190 212,165 212,130 C212,110 225,115 228,135 Z" fill="url(#bq-rose-petal-main)"/>
+        <!-- 4. Bottom Cup Petal -->
+        <path d="M115,160 C125,205 195,205 205,160 C190,190 130,190 115,160 Z" fill="url(#bq-rose-petal-light)"/>
+        <!-- 5. Mid Tier Left Hugging Petal -->
+        <path d="M110,125 C108,165 155,188 175,180 C155,175 128,155 128,125 C128,105 115,110 110,125 Z" fill="url(#bq-rose-petal-main)"/>
+        <!-- 6. Mid Tier Right Hugging Petal -->
+        <path d="M210,125 C212,165 165,188 145,180 C165,175 192,155 192,125 C192,105 205,110 210,125 Z" fill="url(#bq-rose-petal-main)"/>
+        <!-- 7. Center Fold Overlap (Dark) -->
+        <path d="M125,120 C125,165 195,165 195,120 C195,95 125,95 125,120 Z" fill="url(#bq-rose-petal-dark)"/>
+        <!-- 8. Center Fold Overlap (Light) -->
+        <path d="M130,118 C135,152 185,152 190,118 C175,138 145,138 130,118 Z" fill="url(#bq-rose-petal-light)"/>
+        <!-- 9. Inner Swirl Petal (Main) -->
+        <path d="M135,112 C135,138 185,138 185,112 C185,96 135,96 135,112 Z" fill="url(#bq-rose-petal-main)"/>
+        <!-- 10. Inner Swirl Petal (Light) -->
+        <path d="M140,110 C143,128 177,128 180,110 C170,122 150,122 140,110 Z" fill="url(#bq-rose-petal-light)"/>
+        <!-- 11. Rose Heart Core -->
+        <path d="M146,106 C146,120 174,120 174,106 C174,96 146,96 146,106 Z" fill="url(#bq-rose-petal-dark)"/>
+        <path d="M152,104 C152,112 168,112 168,104 C164,109 156,109 152,104 Z" fill="#FFA8BA"/>
+      </g>
+      <!-- 12. Delicate Petal Highlights -->
+      <path d="M128,162 Q160,192 192,162" fill="none" stroke="#FFCCD5" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+      <path d="M138,125 Q160,145 182,125" fill="none" stroke="#FFCCD5" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+    </g>
+
+    <!-- Baby's Breath / Gypsophila Dainty Filler Sprigs -->
+    <g id="bouquet-gypsophila" fill="#FFFFFF" opacity="0.95">
+      <circle cx="106" cy="142" r="3.5"/><circle cx="114" cy="136" r="2.5"/><circle cx="98" cy="150" r="2.5"/>
+      <circle cx="282" cy="142" r="3.5"/><circle cx="274" cy="135" r="2.5"/><circle cx="290" cy="148" r="2.5"/>
+      <circle cx="206" cy="135" r="3.5"/><circle cx="198" cy="128" r="2.5"/><circle cx="214" cy="140" r="2.5"/>
+      <circle cx="150" cy="235" r="3"/><circle cx="258" cy="242" r="3"/>
+      <circle cx="178" cy="275" r="2.5"/><circle cx="236" cy="275" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- ==================== 7. FRONT WRAPPING PAPER (Sculptural Origami Cone) ==================== -->
+  <!-- Envelops and holds the stems completely — no hollow void -->
+  <g id="wrapping-front" filter="url(#bq-shadow)">
+    <!-- Base Kraft Cone Body (Behind the overlapping flaps) -->
+    <path d="M68,260 C130,285 290,285 352,260 L235,420 L185,420 Z" fill="#C29F7C"/>
+
+    <!-- Contact Shadow cast by flowers onto paper opening -->
+    <path d="M75,264 C135,296 285,296 345,264 C285,278 135,278 75,264 Z" fill="#241512" opacity="0.35"/>
+
+    <!-- Left Origami Kraft Flap (Folded across center toward right) -->
+    <path d="M52,242 L185,422 L225,422 L160,285 L85,255 Z" fill="url(#kraft-fold-left)"/>
+    <!-- Crisp Outer Bevel Edge on Left Flap -->
+    <path d="M52,242 L185,422" stroke="#BA9875" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M56,246 L184,418" stroke="#FFFFFF" stroke-width="1.2" opacity="0.35"/>
+
+    <!-- Right Origami Kraft Flap (Overlapping Left Flap diagonally) -->
+    <path d="M368,242 L235,422 L178,422 L260,280 L335,252 Z" fill="url(#kraft-fold-right)"/>
+    <!-- Crisp Outer Bevel Edge on Right Flap -->
+    <path d="M368,242 L235,422" stroke="#AA845E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M364,246 L236,418" stroke="#FFFFFF" stroke-width="1.2" opacity="0.35"/>
+
+    <!-- Diagonal Overlap Shadow Crease where Right Flap overlaps Left Flap -->
+    <path d="M260,280 L182,422" stroke="#684A2E" stroke-width="3" opacity="0.45" stroke-linecap="round"/>
+
+    <!-- Delicate Fold Accent Facets -->
+    <polygon points="52,242 85,255 70,290" fill="#EAD5BE" opacity="0.5"/>
+    <polygon points="368,242 335,252 350,290" fill="#DFBF9F" opacity="0.5"/>
+  </g>
+
+  <!-- ==================== 8. SILK RIBBON & BOW (Tying the stems together) ==================== -->
+  <g id="bouquet-ribbon" transform="translate(0, 0)" filter="url(#bq-contact-shadow)">
+    <!-- Silk Tie Band Wrapping the Paper Cone -->
+    <ellipse cx="210" cy="420" rx="28" ry="7" fill="url(#ribbon-main)"/>
+    <path d="M184,418 Q210,424 236,418" fill="none" stroke="url(#ribbon-highlight)" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Graceful Flowing Ribbon Tails -->
+    <!-- Left Tail -->
+    <path d="M205,424 Q172,462 166,498 Q178,490 188,480 Q196,454 207,428 Z" fill="url(#ribbon-main)"/>
+    <path d="M200,430 Q174,466 170,496" fill="none" stroke="url(#ribbon-highlight)" stroke-width="2" opacity="0.75"/>
+
+    <!-- Right Tail -->
+    <path d="M215,424 Q242,462 254,498 Q242,490 232,480 Q224,454 213,428 Z" fill="url(#ribbon-main)"/>
+    <path d="M218,430 Q240,466 250,496" fill="none" stroke="url(#ribbon-highlight)" stroke-width="2" opacity="0.75"/>
+
+    <!-- Left Bow Loop -->
+    <path d="M208,420 C160,396 138,426 166,442 C184,450 203,438 208,425 Z" fill="url(#ribbon-main)"/>
+    <path d="M202,422 C170,406 152,426 174,435 Z" fill="url(#ribbon-highlight)"/>
+    <path d="M198,425 C174,414 162,428 178,435 Z" fill="#FFA8BA" opacity="0.7"/>
+
+    <!-- Right Bow Loop -->
+    <path d="M212,420 C260,396 282,426 254,442 C236,450 217,438 212,425 Z" fill="url(#ribbon-main)"/>
+    <path d="M218,422 C250,406 268,426 246,435 Z" fill="url(#ribbon-highlight)"/>
+    <path d="M222,425 C246,414 258,428 242,435 Z" fill="#FFA8BA" opacity="0.7"/>
+
+    <!-- Center Bow Knot -->
+    <ellipse cx="210" cy="421" rx="9" ry="7.5" fill="url(#ribbon-main)"/>
+    <ellipse cx="209" cy="419" rx="6" ry="4" fill="url(#ribbon-highlight)"/>
+    <!-- Knot vertical creases -->
+    <path d="M207,415 Q208,421 207,427" stroke="#A81832" stroke-width="1.2" fill="none" opacity="0.7"/>
+    <path d="M213,415 Q212,421 213,427" stroke="#A81832" stroke-width="1.2" fill="none" opacity="0.7"/>
+  </g>
+</svg>

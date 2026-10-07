@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="van-cream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#F4ECE1"/>
+    </linearGradient>
+    <linearGradient id="van-coral" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#E63956"/>
+    </linearGradient>
+    <linearGradient id="window-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFE0FA"/>
+      <stop offset="100%" stop-color="#9BC0F5"/>
+    </linearGradient>
+    <radialGradient id="headlight-beam" cx="0%" cy="50%" r="100%">
+      <stop offset="0%" stop-color="#FFF3B0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#FFF3B0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow beneath van -->
+  <ellipse cx="140" cy="162" rx="115" ry="12" fill="#583120" opacity="0.25"/>
+
+  <!-- Delivery Van Body -->
+  <g id="van-body-group">
+    <!-- Top Roof & Cabin Curve (Cream Upper Half) -->
+    <path d="M40,110 L40,75 C40,55 55,42 75,42 L180,42 C205,42 225,58 238,82 L248,102 C252,108 252,110 252,110 Z" fill="url(#van-cream)"/>
+
+    <!-- Bottom Lower Chassis (Coral Lower Half) -->
+    <path d="M38,108 L254,108 C256,108 258,112 258,118 L256,138 C256,145 250,150 242,150 L212,150 C212,130 188,130 188,150 L108,150 C108,130 84,130 84,150 L48,150 C40,150 36,144 36,136 L36,114 C36,110 37,108 38,108 Z" fill="url(#van-coral)"/>
+
+    <!-- Cute Chrome Divider Strip -->
+    <line x1="38" y1="108" x2="254" y2="108" stroke="#D3B89D" stroke-width="2.5"/>
+
+    <!-- Windshield & Side Windows -->
+    <!-- Front Windshield -->
+    <path d="M210,50 L234,80 C238,86 238,98 238,98 L202,98 L202,50 Z" fill="url(#window-glass)"/>
+    <path d="M228,60 L236,75" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Driver Side Window -->
+    <rect x="150" y="50" width="46" height="48" rx="6" fill="url(#window-glass)"/>
+    <line x1="160" y1="56" x2="186" y2="88" stroke="#FFFFFF" stroke-width="2" opacity="0.6"/>
+
+    <!-- Rear Cargo Window -->
+    <rect x="52" y="52" width="86" height="44" rx="8" fill="#EAE0D5"/>
+
+    <!-- Flower Delivery Logo on Van Side -->
+    <g transform="translate(95, 74)">
+      <!-- Mini tulip icon -->
+      <path d="M0,0 C-6,-5 -8,-14 0,-18 C8,-14 6,-5 0,0 Z" fill="#E63956"/>
+      <path d="M0,0 L0,6" stroke="#4F772D" stroke-width="1.8"/>
+      <text x="14" y="-4" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#6B3A28" letter-spacing="0.5">FLOWER</text>
+      <text x="14" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#8C5845" letter-spacing="1.5">EXPRESS</text>
+    </g>
+
+    <!-- Headlight & Glow -->
+    <path d="M256,112 L280,105 L280,135 L256,128 Z" fill="url(#headlight-beam)"/>
+    <path d="M254,112 C258,112 260,116 260,120 C260,124 258,128 254,128 Z" fill="#FFF3B0"/>
+
+    <!-- Front & Rear Bumpers -->
+    <rect x="250" y="136" width="12" height="10" rx="3" fill="#C5BAAF"/>
+    <rect x="30" y="136" width="10" height="10" rx="3" fill="#C5BAAF"/>
+  </g>
+
+  <!-- Wheels (Separate groups for smooth spinning animation) -->
+  <g id="van-rear-wheel" transform="translate(96, 150)">
+    <circle cx="0" cy="0" r="22" fill="#36312D"/>
+    <circle cx="0" cy="0" r="14" fill="#CFC4B8"/>
+    <circle cx="0" cy="0" r="5" fill="#E63956"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#8A7E72" stroke-width="2"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#8A7E72" stroke-width="2"/>
+  </g>
+
+  <g id="van-front-wheel" transform="translate(200, 150)">
+    <circle cx="0" cy="0" r="22" fill="#36312D"/>
+    <circle cx="0" cy="0" r="14" fill="#CFC4B8"/>
+    <circle cx="0" cy="0" r="5" fill="#E63956"/>
+    <line x1="-12" y1="0" x2="12" y2="0" stroke="#8A7E72" stroke-width="2"/>
+    <line x1="0" y1="-12" x2="0" y2="12" stroke="#8A7E72" stroke-width="2"/>
+  </g>
+</svg>

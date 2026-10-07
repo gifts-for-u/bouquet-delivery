@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tulip-glow" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FF99C8" stop-opacity="0.38"/>
+      <stop offset="70%" stop-color="#F25C7E" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#F25C7E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tulip-stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B8E3D"/>
+      <stop offset="100%" stop-color="#385F24"/>
+    </linearGradient>
+    <linearGradient id="tulip-leaf-left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6DA34D"/>
+      <stop offset="100%" stop-color="#385F24"/>
+    </linearGradient>
+    <linearGradient id="tulip-leaf-right" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7BB458"/>
+      <stop offset="100%" stop-color="#426F2B"/>
+    </linearGradient>
+    <linearGradient id="tulip-petal-back" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#F25C7E"/>
+      <stop offset="100%" stop-color="#C72C48"/>
+    </linearGradient>
+    <linearGradient id="tulip-petal-left" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFB3C6"/>
+      <stop offset="40%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#D92548"/>
+    </linearGradient>
+    <linearGradient id="tulip-petal-right" x1="80%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8BA"/>
+      <stop offset="40%" stop-color="#FF637D"/>
+      <stop offset="100%" stop-color="#C9184A"/>
+    </linearGradient>
+    <linearGradient id="tulip-petal-mid" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0E9"/>
+      <stop offset="45%" stop-color="#FF85A1"/>
+      <stop offset="100%" stop-color="#E02A4F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="160" cy="140" r="140" fill="url(#tulip-glow)" class="flower-glow-halo"/>
+
+  <!-- Stem and Graceful Arching Leaves -->
+  <g id="tulip-foliage">
+    <!-- Tall curved stem -->
+    <path d="M160,180 Q158,280 162,390" fill="none" stroke="url(#tulip-stem)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Left Arched Tulip Leaf -->
+    <path d="M160,380 C130,340 90,260 88,185 C96,215 130,290 160,320 Z" fill="url(#tulip-leaf-left)"/>
+    <path d="M160,380 C130,340 90,260 88,185" fill="none" stroke="#9AD37B" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Right Arching Tulip Leaf -->
+    <path d="M160,350 C185,310 235,240 238,160 C230,195 190,280 160,310 Z" fill="url(#tulip-leaf-right)"/>
+    <path d="M160,350 C185,310 235,240 238,160" fill="none" stroke="#A7E185" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tulip Cup Bloom -->
+  <g id="tulip-bloom" transform-origin="160 140">
+    <!-- Back Central Petal (Peak) -->
+    <path d="M160,65 C142,95 138,135 140,165 C152,175 168,175 180,165 C182,135 178,95 160,65 Z" fill="url(#tulip-petal-back)"/>
+
+    <!-- Left Outer Petal -->
+    <path d="M160,78 C122,82 98,115 102,158 C106,192 135,210 160,212 C145,190 125,160 135,120 C140,100 152,86 160,78 Z" fill="url(#tulip-petal-left)"/>
+
+    <!-- Right Outer Petal -->
+    <path d="M160,78 C198,82 222,115 218,158 C214,192 185,210 160,212 C175,190 195,160 185,120 C180,100 168,86 160,78 Z" fill="url(#tulip-petal-right)"/>
+
+    <!-- Front Center Overlapping Petal -->
+    <path d="M160,82 C142,102 124,130 128,170 C132,198 148,212 160,214 C172,212 188,198 192,170 C196,130 178,102 160,82 Z" fill="url(#tulip-petal-mid)"/>
+
+    <!-- Satin Highlight Glimmer -->
+    <path d="M160,92 C150,115 142,145 144,175" fill="none" stroke="#FFF0F5" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M152,185 Q160,205 168,185" fill="none" stroke="#FFE3ED" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
+  </g>
+</svg>

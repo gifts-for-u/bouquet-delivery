@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Flower Delivery — Responsive Styles
+   Mobile-first optimization for 360x800, 375x812, 390x844, 412x915.
+   Desktop cinematic presentation framing.
+   ========================================================================== */
+
+/* Mobile Small Devices (e.g., 360px wide or short height) */
+@media (max-width: 375px), (max-height: 700px) {
+  #start-title {
+    font-size: 1.8rem;
+  }
+
+  .start-dialog-card {
+    padding: 28px 18px 22px;
+  }
+
+  .bouquet-display-frame {
+    height: 400px;
+  }
+
+  #bouquet-interactive-wrap {
+    width: 270px;
+    height: 340px;
+  }
+
+  .flower-visual-stage {
+    width: 210px;
+    height: 240px;
+  }
+
+  #flower-name {
+    font-size: 1.85rem;
+  }
+
+  #flower-meaning-body {
+    font-size: 0.88rem;
+  }
+
+  #final-bouquet-wrap {
+    width: 170px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  #final-intro-text {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .typing-line {
+    font-size: 0.84rem;
+  }
+
+  #final-typing-container {
+    padding: 16px 14px;
+    gap: 10px;
+  }
+}
+
+/* Medium Mobile Devices (375px - 414px) */
+@media (min-width: 376px) and (max-width: 480px) {
+  .bouquet-display-frame {
+    height: 450px;
+  }
+
+  #bouquet-interactive-wrap {
+    width: 300px;
+    height: 380px;
+  }
+}
+
+/* Landscape on Mobile (prevent overlap) */
+@media (max-height: 550px) and (orientation: landscape) {
+  #app-viewport {
+    max-height: 100dvh;
+  }
+
+  .start-dialog-card {
+    padding: 20px;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .start-icon-wrap {
+    margin-bottom: 0;
+  }
+
+  .bouquet-display-frame {
+    height: 320px;
+  }
+
+  #bouquet-interactive-wrap {
+    width: 220px;
+    height: 280px;
+  }
+
+  .flower-visual-stage {
+    width: 160px;
+    height: 180px;
+  }
+
+  #final-bouquet-wrap {
+    width: 140px;
+    height: 160px;
+  }
+}
+
+/* Desktop Viewport Enhancement:
+   Constrain to a polished mobile-sized card with elegant surrounding backdrop */
+@media (min-width: 768px) {
+  body {
+    padding: 24px;
+    background: #201A24;
+  }
+
+  body[data-chapter="day"] {
+    background: radial-gradient(circle at 50% 50%, #442E35 0%, #22161A 100%);
+  }
+
+  body[data-chapter="night"] {
+    background: radial-gradient(circle at 50% 50%, #15111D 0%, #08060B 100%);
+  }
+
+  #app-viewport {
+    border-radius: 36px;
+    box-shadow: 
+      0 28px 60px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}

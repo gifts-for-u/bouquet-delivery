@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#F7C2B4">
+  <meta name="description" content="Kisah manis pengiriman buket bunga spesial untukmu.">
+  <title>Flower Delivery — A Gift For You</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💐</text></svg>">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/delivery.css">
+  <link rel="stylesheet" href="css/flowers.css">
+  <link rel="stylesheet" href="css/final.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-chapter="day" data-screen="START">
+
+  <!-- Accessible Screen Reader Announcer -->
+  <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- App Viewport Container -->
+  <main id="app-viewport">
+
+    <!-- Floating Audio Toggle Control -->
+    <header class="floating-controls">
+      <button id="mute-btn" class="icon-btn" type="button" aria-label="Pengaturan suara" aria-pressed="false" title="Matikan suara">
+        <!-- Sound On Icon -->
+        <svg class="icon-sound" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <!-- Sound Muted Icon -->
+        <svg class="icon-muted" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 0. START OVERLAY -->
+    <section id="start-screen" aria-label="Halaman pembuka">
+      <div class="start-dialog-card">
+        <div class="start-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <h1 id="start-title">ada kiriman buat kamu</h1>
+        <p id="start-subtitle">dikirim pelan-pelan, khusus buat satu orang.</p>
+        <button id="start-btn" class="primary-btn" type="button">terima paketnya</button>
+        <div class="sound-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span id="start-sound-note">nyalakan suara biar lebih seru</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. CHAPTER 1: EXTERIOR DELIVERY SCENE -->
+    <section id="scene-exterior" class="scene-container" aria-label="Pemandangan luar rumah"></section>
+
+    <!-- 2. CHAPTER 1: INTERIOR HOUSE SCENE -->
+    <section id="scene-interior" class="scene-container" aria-label="Ruangan dalam rumah">
+      <div id="package-tap-hint" class="tap-hint-pill">ketuk paketnya</div>
+    </section>
+
+    <!-- 3. LETTER FIRST OVERLAY -->
+    <section id="letter-overlay" aria-label="Surat pengantar">
+      <article id="letter-card" class="letter-paper-card">
+        <div class="letter-stamp" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <h2 id="letter-greeting">hai sayang,</h2>
+        <div id="letter-body"></div>
+        <div id="letter-sig">— dari aku</div>
+        <div class="letter-action-wrap">
+          <button id="letter-continue-btn" class="letter-continue-btn" type="button">lanjut</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- 4. BOUQUET REVEAL VIEW -->
+    <section id="bouquet-section" aria-label="Buket bunga yang terungkap">
+      <div class="bouquet-display-frame">
+        <div id="bouquet-ambient-glow-layer" aria-hidden="true"></div>
+        <div id="bouquet-interactive-wrap" role="button" tabindex="0" aria-label="buket bunga — ketuk untuk melihat bunganya satu per satu">
+          <img src="assets/svg/bouquet.svg" alt="Buket bunga indah" loading="eager" />
+        </div>
+      </div>
+      <div id="bouquet-hint" class="bouquet-hint-text">klik bunganya deh sayang</div>
+    </section>
+
+    <!-- 5. CHAPTER 2: FLOWER EXPLORATION VIEW -->
+    <section id="flowers-exploration-section" aria-label="Eksplorasi makna bunga">
+      <div id="flower-counter" aria-hidden="true">1 / 5</div>
+      <article id="flower-stage-card" role="button" tabindex="0" aria-label="Bunga saat ini. Ketuk untuk lanjut">
+        <span class="sparkle-accent" aria-hidden="true">✦</span>
+        <div class="flower-visual-stage">
+          <div id="flower-glow-halo" aria-hidden="true"></div>
+          <div id="flower-art-display"></div>
+        </div>
+        <span class="sparkle-accent" aria-hidden="true">✦</span>
+        <h2 id="flower-name">rose</h2>
+        <h3 id="flower-meaning-title">love & devotion</h3>
+        <p id="flower-meaning-body"></p>
+        <p id="flower-personal-message"></p>
+        <button id="flower-advance-btn" class="flower-continue-hint" type="button">
+          <span>ketuk untuk lanjut</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </article>
+      <div id="flower-complete-notice" aria-live="polite">dan kalau semuanya disatukan…</div>
+    </section>
+
+    <!-- 6. CHAPTER 3: FINAL REVEAL VIEW -->
+    <section id="final-reveal-section" aria-label="Pesan romantis penutup">
+      <div class="final-content-wrapper">
+        <div id="final-bouquet-wrap" aria-hidden="true">
+          <img src="assets/svg/bouquet.svg" alt="Buket bunga utuh" loading="eager" />
+        </div>
+        <h2 id="final-intro-text">ini buat kamu ya</h2>
+        <div id="final-typing-container" aria-live="polite"></div>
+        <div id="final-personal-card">
+          <p id="final-personal-text"></p>
+        </div>
+        <button id="replay-button" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span>ulang dari awal</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- External GSAP (with automatic zero-dependency fallback in config.js if CDN offline) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Project Application Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/delivery.js"></script>
+  <script src="js/package.js"></script>
+  <script src="js/flowers.js"></script>
+  <script src="js/final-reveal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

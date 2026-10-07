@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" width="100%" height="100%">
+  <defs>
+    <radialGradient id="rose-glow" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="#FF758F" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#E63946" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rose-stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F772D"/>
+      <stop offset="100%" stop-color="#2D4A22"/>
+    </linearGradient>
+    <linearGradient id="rose-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#588157"/>
+      <stop offset="100%" stop-color="#3A5A40"/>
+    </linearGradient>
+    <radialGradient id="petal-main" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF5D73"/>
+      <stop offset="60%" stop-color="#E63956"/>
+      <stop offset="100%" stop-color="#A81832"/>
+    </radialGradient>
+    <linearGradient id="petal-dark" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#C9184A"/>
+      <stop offset="100%" stop-color="#800F2F"/>
+    </linearGradient>
+    <linearGradient id="petal-light" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8BA"/>
+      <stop offset="50%" stop-color="#FF758F"/>
+      <stop offset="100%" stop-color="#D92548"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="160" cy="150" r="140" fill="url(#rose-glow)" class="flower-glow-halo"/>
+
+  <!-- Stem and Leaves -->
+  <g id="rose-foliage">
+    <!-- Gentle curved stem -->
+    <path d="M160,195 Q158,280 162,390" fill="none" stroke="url(#rose-stem)" stroke-width="7" stroke-linecap="round"/>
+    
+    <!-- Left Leaf -->
+    <g transform="translate(0, 0)">
+      <path d="M159,275 C120,265 95,285 85,310 C105,325 140,310 159,285 Z" fill="url(#rose-leaf)"/>
+      <path d="M159,275 Q125,295 90,307" fill="none" stroke="#74A57F" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- subtle vein -->
+      <path d="M135,286 Q125,278 112,282" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M145,293 Q138,302 122,305" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Right Leaf -->
+    <g transform="translate(0, 0)">
+      <path d="M161,245 C195,230 228,245 235,270 C215,285 180,275 161,255 Z" fill="url(#rose-leaf)"/>
+      <path d="M161,245 Q195,255 230,267" fill="none" stroke="#74A57F" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- subtle vein -->
+      <path d="M185,252 Q195,242 208,245" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M195,258 Q202,268 218,269" fill="none" stroke="#74A57F" stroke-width="1.2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Little Stem Thorn -->
+    <path d="M157,330 Q150,332 145,340 Q156,339 158,336 Z" fill="#3A5A40"/>
+    <!-- Sepals beneath bloom -->
+    <path d="M148,185 C142,210 130,225 120,230 C135,215 146,195 152,185 Z" fill="#4F772D"/>
+    <path d="M172,185 C178,210 190,225 200,230 C185,215 174,195 168,185 Z" fill="#4F772D"/>
+    <path d="M160,188 C158,218 162,230 160,238 C163,225 163,205 160,188 Z" fill="#3A5A40"/>
+  </g>
+
+  <!-- Rose Blossom (Rich Layered Petals) -->
+  <g id="rose-bloom" transform-origin="160 150">
+    <!-- Outer Base Petals -->
+    <path d="M100,150 C95,200 135,215 160,215 C185,215 225,200 220,150 C220,105 180,85 160,85 C140,85 100,105 100,150 Z" fill="url(#petal-dark)" opacity="0.95"/>
+
+    <!-- Outer Flared Petals -->
+    <path d="M92,135 C88,175 125,205 160,208 C135,190 108,165 108,130 C108,110 95,115 92,135 Z" fill="url(#petal-main)"/>
+    <path d="M228,135 C232,175 195,205 160,208 C185,190 212,165 212,130 C212,110 225,115 228,135 Z" fill="url(#petal-main)"/>
+
+    <!-- Bottom Cup Petal -->
+    <path d="M115,160 C125,205 195,205 205,160 C190,190 130,190 115,160 Z" fill="url(#petal-light)"/>
+
+    <!-- Mid Tier Petals (Left & Right Hugging) -->
+    <path d="M110,125 C108,165 155,188 175,180 C155,175 128,155 128,125 C128,105 115,110 110,125 Z" fill="url(#petal-main)"/>
+    <path d="M210,125 C212,165 165,188 145,180 C165,175 192,155 192,125 C192,105 205,110 210,125 Z" fill="url(#petal-main)"/>
+
+    <!-- Center Fold Overlap -->
+    <path d="M125,120 C125,165 195,165 195,120 C195,95 125,95 125,120 Z" fill="url(#petal-dark)"/>
+    <path d="M130,118 C135,152 185,152 190,118 C175,138 145,138 130,118 Z" fill="url(#petal-light)"/>
+
+    <!-- Inner Swirl Petals -->
+    <path d="M135,112 C135,138 185,138 185,112 C185,96 135,96 135,112 Z" fill="url(#petal-main)"/>
+    <path d="M140,110 C143,128 177,128 180,110 C170,122 150,122 140,110 Z" fill="url(#petal-light)"/>
+
+    <!-- Rose Heart / Spiral Bud Core -->
+    <path d="M146,106 C146,120 174,120 174,106 C174,96 146,96 146,106 Z" fill="url(#petal-dark)"/>
+    <path d="M152,104 C152,112 168,112 168,104 C164,109 156,109 152,104 Z" fill="#FFA8BA"/>
+  </g>
+
+  <!-- Delicate Petal Highlights -->
+  <path d="M128,162 Q160,192 192,162" fill="none" stroke="#FFCCD5" stroke-width="1.6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M138,125 Q160,145 182,125" fill="none" stroke="#FFCCD5" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+</svg>

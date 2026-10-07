@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" width="100%" height="100%">
+  <defs>
+    <radialGradient id="lav-glow" cx="50%" cy="38%" r="50%">
+      <stop offset="0%" stop-color="#CDB4DB" stop-opacity="0.45"/>
+      <stop offset="65%" stop-color="#9B5DE5" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#9B5DE5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lav-stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B9080"/>
+      <stop offset="100%" stop-color="#406254"/>
+    </linearGradient>
+    <linearGradient id="lav-leaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#79A390"/>
+      <stop offset="100%" stop-color="#3D5A4C"/>
+    </linearGradient>
+    <linearGradient id="floret-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8338EC"/>
+      <stop offset="100%" stop-color="#5A189A"/>
+    </linearGradient>
+    <linearGradient id="floret-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0AAFF"/>
+      <stop offset="60%" stop-color="#C77DFF"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="160" cy="180" r="145" fill="url(#lav-glow)" class="flower-glow-halo"/>
+
+  <!-- Main Stalk -->
+  <g id="lavender-stem">
+    <path d="M160,70 Q159,250 160,395" fill="none" stroke="url(#lav-stem)" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Slender Linear Leaves -->
+    <path d="M160,330 C135,310 115,280 112,240 C122,275 142,305 160,318 Z" fill="url(#lav-leaf)"/>
+    <path d="M160,310 C185,290 205,260 208,220 C198,255 178,285 160,298 Z" fill="url(#lav-leaf)"/>
+    <path d="M160,260 C140,240 128,215 125,185 C132,210 148,235 160,250 Z" fill="url(#lav-leaf)"/>
+    <path d="M160,245 C180,225 192,200 195,170 C188,195 172,220 160,235 Z" fill="url(#lav-leaf)"/>
+  </g>
+
+  <!-- Clustered Florets along the spike (Top to Bottom tiers) -->
+  <g id="lavender-bloom" transform-origin="160 180">
+    <!-- Spike Tip (Tiny Budding Florets) -->
+    <ellipse cx="160" cy="72" rx="7" ry="11" fill="url(#floret-light)"/>
+    <ellipse cx="154" cy="80" rx="8" ry="10" fill="url(#floret-dark)" transform="rotate(-25 154 80)"/>
+    <ellipse cx="166" cy="80" rx="8" ry="10" fill="url(#floret-light)" transform="rotate(25 166 80)"/>
+
+    <!-- Tier 1 -->
+    <g transform="translate(0, 18)">
+      <ellipse cx="148" cy="80" rx="11" ry="9" fill="url(#floret-dark)" transform="rotate(-30 148 80)"/>
+      <ellipse cx="172" cy="80" rx="11" ry="9" fill="url(#floret-light)" transform="rotate(30 172 80)"/>
+      <ellipse cx="160" cy="82" rx="10" ry="11" fill="url(#floret-light)"/>
+      <ellipse cx="152" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+    </g>
+
+    <!-- Tier 2 -->
+    <g transform="translate(0, 38)">
+      <ellipse cx="144" cy="80" rx="13" ry="10" fill="url(#floret-dark)" transform="rotate(-35 144 80)"/>
+      <ellipse cx="176" cy="80" rx="13" ry="10" fill="url(#floret-light)" transform="rotate(35 176 80)"/>
+      <ellipse cx="159" cy="83" rx="12" ry="12" fill="url(#floret-light)"/>
+      <ellipse cx="150" cy="88" rx="9" ry="7" fill="#F3C4FB"/>
+      <ellipse cx="168" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+    </g>
+
+    <!-- Tier 3 -->
+    <g transform="translate(0, 60)">
+      <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#floret-dark)" transform="rotate(-40 142 80)"/>
+      <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#floret-light)" transform="rotate(40 178 80)"/>
+      <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#floret-dark)"/>
+      <ellipse cx="149" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+      <ellipse cx="170" cy="89" rx="9" ry="7" fill="#F3C4FB"/>
+    </g>
+
+    <!-- Tier 4 -->
+    <g transform="translate(0, 84)">
+      <ellipse cx="141" cy="80" rx="15" ry="11" fill="url(#floret-dark)" transform="rotate(-45 141 80)"/>
+      <ellipse cx="179" cy="80" rx="15" ry="11" fill="url(#floret-light)" transform="rotate(45 179 80)"/>
+      <ellipse cx="160" cy="84" rx="13" ry="12" fill="url(#floret-light)"/>
+      <ellipse cx="148" cy="90" rx="9" ry="7" fill="#F3C4FB"/>
+      <ellipse cx="171" cy="90" rx="9" ry="7" fill="#F3C4FB"/>
+    </g>
+
+    <!-- Tier 5 -->
+    <g transform="translate(0, 108)">
+      <ellipse cx="142" cy="80" rx="14" ry="11" fill="url(#floret-dark)" transform="rotate(-40 142 80)"/>
+      <ellipse cx="178" cy="80" rx="14" ry="11" fill="url(#floret-light)" transform="rotate(40 178 80)"/>
+      <ellipse cx="160" cy="83" rx="12" ry="11" fill="url(#floret-light)"/>
+      <ellipse cx="150" cy="88" rx="8" ry="6" fill="#F3C4FB"/>
+    </g>
+
+    <!-- Tier 6 (Slight gap / whorl) -->
+    <g transform="translate(0, 134)">
+      <ellipse cx="145" cy="80" rx="13" ry="10" fill="url(#floret-dark)" transform="rotate(-35 145 80)"/>
+      <ellipse cx="175" cy="80" rx="13" ry="10" fill="url(#floret-light)" transform="rotate(35 175 80)"/>
+      <ellipse cx="160" cy="82" rx="11" ry="10" fill="url(#floret-dark)"/>
+    </g>
+  </g>
+</svg>

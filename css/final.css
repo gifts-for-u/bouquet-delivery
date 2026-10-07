@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Flower Delivery — Chapter 3: Final Reveal Styles
+   Bouquet returns, JetBrains Mono terminal typing animation,
+   blinking cursor, intimate personal card, replay affordance.
+   ========================================================================== */
+
+#final-reveal-section {
+  position: absolute;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: max(20px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+  background: var(--bg-night-grad);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#final-reveal-section.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.final-content-wrapper {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+  padding: 10px 4px 28px;
+}
+
+/* Returning Bouquet Frame */
+#final-bouquet-wrap {
+  position: relative;
+  width: 170px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#final-bouquet-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(255, 117, 143, 0.28));
+}
+
+/* "ini buat kamu ya" */
+#final-intro-text {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #FFCCD5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 14px rgba(230, 57, 86, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   JetBrains Mono Terminal Typing Box
+   -------------------------------------------------------------------------- */
+#final-typing-container {
+  width: 100%;
+  background: rgba(18, 14, 24, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  margin-bottom: 20px;
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+/* Individual Typing Line Elements */
+.typing-line {
+  font-family: var(--font-mono);
+  font-size: clamp(0.76rem, 3.7vw, 0.90rem);
+  line-height: 1.5;
+  color: #F8EDEB;
+  letter-spacing: -0.025em;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Specific Accent for Punchline */
+.typing-line-4 {
+  color: #FF758F;
+  font-weight: 600;
+}
+
+/* Terminal Cursor */
+.terminal-cursor {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FF758F;
+  margin-left: 2px;
+  line-height: 1;
+  animation: cursor-blink 0.9s infinite step-start;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Final Personal Note Card */
+#final-personal-card {
+  width: 100%;
+  padding: 20px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+#final-personal-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: #E2D9D0;
+}
+
+/* Replay Button */
+#replay-button {
+  min-height: var(--min-touch);
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s var(--transition-smooth);
+}
+
+#replay-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFF;
+  transform: translateY(-2px);
+}
+
+#replay-button:active {
+  transform: translateY(1px);
+}
